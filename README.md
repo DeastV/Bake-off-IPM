@@ -54,12 +54,12 @@ Where movement time $T$ increases as target width $W$ decreases and distance $D$
 ### Design Strategies & Techniques
 * **Visual Categorization:** High-contrast color mapping and grouped spatial layouts to accelerate pre-attentive visual search.
 * **Auditory Feedback (`synth`):** Immediate audio cues triggered on target confirmation, eliminating latency in visual verification.
-* **Effective Target Area Optimization:** Predictive hover affordances and expanded hit boundaries reducing cursor overshooting.
-* **Live Telemetry & Evaluation:** Cloud synchronization with **Google Firebase** to record trial durations, hit counts, miss counts, and calculate user throughput ($bits/s$).
+* **Live Telemetry & Evaluation:** Quantitative measurement of trial execution time, successful hits, misses, selection accuracy (%), average acquisition time per target, and penalty scoring.
+* **Optional Firebase Sync:** Realtime Database logging is disabled by default (`RECORD_TO_FIREBASE = false`) with placeholder configuration in `index.html`. Connect your own Firebase Realtime Database instance by updating `firebaseConfig`.
 
 ### Project Structure (Bake-off #2)
-```
-.
+```text
+hci-prototypes-and-benchmarks/
 ├── index.html              # Canvas host page and p5.js dependencies
 ├── sketch.js               # Main interaction loop, grid layout, trial logic
 ├── target.js               # Target entity representation and hit testing
@@ -82,9 +82,12 @@ No build process or installation is required:
 
 ---
 
-## Authors
+## Authors & Acknowledgments
 
 * **David Vasques** ([@DeastV](https://github.com/DeastV))
 * **Guilherme Marques** ([@marques-jpg](https://github.com/marques-jpg))
 
-*Instituto Superior Técnico — Universidade de Lisboa (2025/2026)*
+Collaborative group project developed for Interfaces Pessoa-Máquina (IPM) at Instituto Superior Técnico, Universidade de Lisboa.
+
+*Course-Provided Resources:* Display calibration utilities (`ppi.js`, `support.js`, `target.js`) and target label sets (`legendas/`) were provided by the IPM teaching faculty. The MIT License applies to the student implementation, custom interaction design, auditory synthesis, and Figma prototypes.
+
