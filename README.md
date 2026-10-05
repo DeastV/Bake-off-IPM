@@ -14,11 +14,11 @@ This repository showcases two core challenges:
 
 ---
 
-## 📱 Bake-Off #1: Recipe Social Network (Mobile UI/UX Prototype)
+## Bake-Off 1: Recipe Social Network (Mobile UI/UX Prototype)
 
 <p align="center">
   <a href="https://www.figma.com/proto/VmwdEbkfVBAM2bRtJR2kEj/L04G02?node-id=0-1&t=15Ww1N0VZqUnA8yM-1">
-    <img src="https://img.shields.io/badge/▶_Test_Interactive_Prototype-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Test on Figma" height="40" />
+    <img src="https://img.shields.io/badge/Test_Interactive_Prototype-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Test on Figma" height="40" />
   </a>
 </p>
 
@@ -36,11 +36,11 @@ An interactive mobile app concept reimagining recipe discovery and cooking guida
 * **Formative User Testing:** Conducted iterative user evaluations using **Think-Aloud Protocols** and **Wizard of Oz** methodologies to identify cognitive bottlenecks and optimize navigation flows.
 * **Quantitative Evaluation:** Validated user satisfaction and usability using the **User Experience Questionnaire (UEQ-S)**, scoring high benchmark ratings in perspicuity and efficiency.
 
-👉 **[Launch Interactive Mobile Prototype in Figma](https://www.figma.com/proto/VmwdEbkfVBAM2bRtJR2kEj/L04G02?node-id=0-1&t=15Ww1N0VZqUnA8yM-1)**
+**[Launch Interactive Mobile Prototype in Figma](https://www.figma.com/proto/VmwdEbkfVBAM2bRtJR2kEj/L04G02?node-id=0-1&t=15Ww1N0VZqUnA8yM-1)**
 
 ---
 
-## 🎯 Bake-Off #2: Dense UI Target Selection (p5.js Implementation)
+## Bake-Off 2: Dense UI Target Selection (p5.js Implementation)
 
 An interactive, experimental canvas application designed for high-speed, high-accuracy target acquisition across densely populated interactive displays (80 targets in an 8x10 grid).
 
