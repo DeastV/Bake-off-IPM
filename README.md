@@ -1,40 +1,63 @@
-# Dense UI Target Selection — HCI Bake-Off
+# Human-Computer Interaction (HCI) — Projects & Prototypes
 
+[![Figma Prototype](https://img.shields.io/badge/Figma-Interactive%20Prototype-F24E1E.svg?logo=figma&logoColor=white)](https://www.figma.com/proto/VmwdEbkfVBAM2bRtJR2kEj/L04G02?node-id=0-1&t=15Ww1N0VZqUnA8yM-1)
 [![Language](https://img.shields.io/badge/Language-JavaScript%20(ES6)-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Library](https://img.shields.io/badge/Library-p5.js-ed225d.svg)](https://p5js.org/)
-[![Field](https://img.shields.io/badge/Field-Human--Computer%20Interaction%20(HCI)-blue.svg)]()
-[![Backend](https://img.shields.io/badge/Database-Firebase-orange.svg)](https://firebase.google.com/)
+[![Database](https://img.shields.io/badge/Database-Firebase-orange.svg)](https://firebase.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-An experimental user interface developed for high-speed, high-accuracy target acquisition in densely populated interactive displays (80 targets in an 8x10 grid). 
+A collection of interactive prototypes and experimental user interfaces developed as part of the **Human-Computer Interaction (Interfaces Pessoa-Máquina — IPM)** course at **Instituto Superior Técnico (IST), Universidade de Lisboa**.
 
-Developed as part of the **Bake-Off #2 Challenge** in the **Human-Computer Interaction (Interfaces Pessoa-Máquina)** course at **Instituto Superior Técnico (IST), Universidade de Lisboa**.
+This repository showcases two core challenges:
+1. **Bake-Off #1:** UI/UX Design & High-Fidelity Mobile App Prototype in Figma.
+2. **Bake-Off #2:** High-speed dense target selection engine built in JavaScript with p5.js under Fitts's Law constraints.
 
 ---
 
-## The Challenge
+## 📱 Bake-Off #1: Recipe Social Network (Mobile UI/UX Prototype)
 
-In human-computer interaction, selecting targets in dense graphical interfaces is bounded by **Fitts's Law**:
+<p align="center">
+  <a href="https://www.figma.com/proto/VmwdEbkfVBAM2bRtJR2kEj/L04G02?node-id=0-1&t=15Ww1N0VZqUnA8yM-1">
+    <img src="https://img.shields.io/badge/▶_Test_Interactive_Prototype-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Test on Figma" height="40" />
+  </a>
+</p>
+
+### The Problem
+Traditional video-sharing platforms (like TikTok or YouTube) lack specialized interfaces for culinary content. Users struggle to filter recipes based on seasonal availability, dietary restrictions, or the specific kitchen utensils they actually own.
+
+### The Solution: High-Fidelity Interactive Prototype
+An interactive mobile app concept reimagining recipe discovery and cooking guidance:
+* **Kitchen Utensil Profiling:** Users configure their home equipment profile, and the app automatically filters out recipes requiring unavailable utensils.
+* **Seasonal & Local Discovery:** Smart search highlighting recipes featuring in-season fruits, vegetables, and ingredients.
+* **Dietary & Allergen Customization:** Preset profiles for vegan, vegetarian, gluten-free, and allergen-free culinary exploration.
+* **Cooking Mode & Video Feed:** Distraction-free interactive video player paired with step-by-step cooking timelines.
+
+### UX Research & Usability Evaluation
+* **Formative User Testing:** Conducted iterative user evaluations using **Think-Aloud Protocols** and **Wizard of Oz** methodologies to identify cognitive bottlenecks and optimize navigation flows.
+* **Quantitative Evaluation:** Validated user satisfaction and usability using the **User Experience Questionnaire (UEQ-S)**, scoring high benchmark ratings in perspicuity and efficiency.
+
+👉 **[Launch Interactive Mobile Prototype in Figma](https://www.figma.com/proto/VmwdEbkfVBAM2bRtJR2kEj/L04G02?node-id=0-1&t=15Ww1N0VZqUnA8yM-1)**
+
+---
+
+## 🎯 Bake-Off #2: Dense UI Target Selection (p5.js Implementation)
+
+An interactive, experimental canvas application designed for high-speed, high-accuracy target acquisition across densely populated interactive displays (80 targets in an 8x10 grid).
+
+### Theoretical Background: Fitts's Law
+In human-computer interaction, targeting performance is bounded by **Fitts's Law**:
 
 $$T = a + b \log_2 \left( \frac{2D}{W} \right)$$
 
-Where acquisition time $T$ increases as target width $W$ decreases and distance $D$ increases. 
+Where movement time $T$ increases as target width $W$ decreases and distance $D$ increases. In dense layouts, visual clutter and small target dimensions drastically increase error rates.
 
-In this challenge, users must find and click 12 sequential target items out of an 80-item grid (8 rows by 10 columns) as quickly and accurately as possible under real-time timing constraints.
+### Design Strategies & Techniques
+* **Visual Categorization:** High-contrast color mapping and grouped spatial layouts to accelerate pre-attentive visual search.
+* **Auditory Feedback (`synth`):** Immediate audio cues triggered on target confirmation, eliminating latency in visual verification.
+* **Effective Target Area Optimization:** Predictive hover affordances and expanded hit boundaries reducing cursor overshooting.
+* **Live Telemetry & Evaluation:** Cloud synchronization with **Google Firebase** to record trial durations, hit counts, miss counts, and calculate user throughput ($bits/s$).
 
----
-
-## Design Strategies & Interaction Techniques
-
-* **Visual Guidance & Color Coding:** Intelligent categorization and high-contrast color highlights to guide the user's focal visual search across the dense matrix.
-* **Auditory Feedback (`synth`):** Audio cue generation upon target selection to minimize visual confirmation delay and reduce user error rate.
-* **Effective Target Area Optimization:** Expanded bounding boxes and predictive hover affordances to minimize cursor movement penalties.
-* **Empirical Data Logging:** Integration with **Google Firebase** to record real-time trial durations, hit counts, miss counts, and calculate overall user throughput.
-
----
-
-## Project Structure
-
+### Project Structure (Bake-off #2)
 ```
 .
 ├── index.html              # Canvas host page and p5.js dependencies
@@ -42,27 +65,20 @@ In this challenge, users must find and click 12 sequential target items out of a
 ├── target.js               # Target entity representation and hit testing
 ├── support.js              # Evaluation metrics and experiment control routines
 ├── ppi.js                  # Display calibration and physical dimension scaling
-├── style.css               # Clean full-screen canvas styling
+├── style.css               # Canvas layout and typography
 ├── legendas/               # Target label CSV dataset files
 ├── LICENSE                 # MIT License
 └── README.md               # Project documentation
 ```
 
----
-
-## How to Run
-
-No build step or complex tooling is needed. You can run the application directly in your browser:
-
-### Option 1: Direct File
-Simply open `index.html` in any modern web browser (Chrome, Firefox, Safari, Brave).
-
-### Option 2: Local HTTP Server (Recommended)
-```bash
-# Using Python
-python3 -m http.server 8000
-```
-Open `http://localhost:8000` in your browser.
+### Running Bake-Off #2 Locally
+No build process or installation is required:
+* **Option 1:** Open `index.html` directly in any modern browser.
+* **Option 2:** Launch a local development server:
+  ```bash
+  python3 -m http.server 8000
+  ```
+  Navigate to `http://localhost:8000`.
 
 ---
 
