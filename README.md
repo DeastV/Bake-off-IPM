@@ -1,9 +1,7 @@
 # Human-Computer Interaction (HCI) — Projects & Prototypes
 
-[![Figma Prototype](https://img.shields.io/badge/Figma-Interactive%20Prototype-F24E1E.svg?logo=figma&logoColor=white)](https://www.figma.com/proto/VmwdEbkfVBAM2bRtJR2kEj/L04G02?node-id=0-1&t=15Ww1N0VZqUnA8yM-1)
 [![Language](https://img.shields.io/badge/Language-JavaScript%20(ES6)-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Library](https://img.shields.io/badge/Library-p5.js-ed225d.svg)](https://p5js.org/)
-[![Database](https://img.shields.io/badge/Database-Firebase-orange.svg)](https://firebase.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A collection of interactive prototypes and experimental user interfaces developed as part of the **Human-Computer Interaction (Interfaces Pessoa-Máquina — IPM)** course at **Instituto Superior Técnico (IST), Universidade de Lisboa**.
@@ -82,12 +80,15 @@ No build process or installation is required:
 
 ---
 
-## Authors & Acknowledgments
+## Known Limitations
 
-* **David Vasques** ([@DeastV](https://github.com/DeastV))
-* **Guilherme Marques** ([@marques-jpg](https://github.com/marques-jpg))
+* **Hardware PPI Dependency:** Physical target dimension constraints under Fitts's Law depend on per-device PPI calibration (`ppi.js`) for exact millimeter rendering across high-DPI screens.
+* **Telemetry Decoupling:** Remote Firebase metrics logging is disabled by default (`RECORD_TO_FIREBASE = false`) and requires personal project credentials.
 
-Collaborative group project developed for Interfaces Pessoa-Máquina (IPM) at Instituto Superior Técnico, Universidade de Lisboa.
+---
 
-*Course-Provided Resources:* Display calibration utilities (`ppi.js`, `support.js`, `target.js`) and target label sets (`legendas/`) were provided by the IPM teaching faculty. The MIT License applies to the student implementation, custom interaction design, auditory synthesis, and Figma prototypes.
+## Credits
+
+* **David Vasques** ([@DeastV](https://github.com/DeastV)), **Guilherme Marques** ([@marques-jpg](https://github.com/marques-jpg))
+* Collaborative group coursework developed for Interfaces Pessoa-Máquina (IPM) at Instituto Superior Técnico, Universidade de Lisboa. Calibration utilities (`ppi.js`, `support.js`, `target.js`) and label sets (`legendas/`) provided by the teaching staff.
 
